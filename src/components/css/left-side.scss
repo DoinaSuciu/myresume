@@ -1,0 +1,11 @@
+@import "../../styles/vars";
+
+.left-side {
+  @media only screen and (min-width: 0) {
+    padding: 24px 40px 0;
+    .contact-details {
+      font-size: 14px;
+      font-family: "Averta Std", sans-serif;
+    }
+  }
+}

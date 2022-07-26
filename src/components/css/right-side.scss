@@ -1,0 +1,63 @@
+@import "../../styles/vars";
+// @import "../../styles/mixins";
+
+.right-side {
+  @media only screen and (min-width: 0) {
+    padding: 80px 40px 0;
+    background-color: $light-grey;
+
+    header {
+      position: relative;
+      figure {
+        position: absolute;
+        right: 0;
+        top: -80px;
+        img {
+          width: 110px;
+          height: auto;
+          border-radius: 50%;
+        }
+      }
+      h1 {
+        margin-bottom: 0;
+        font-size: 36px;
+        font-weight: 100;
+        font-family: "Averta Std", sans-serif;
+      }
+      h2 {
+        display: inline-block;
+        color: white;
+        background-color: $light-black;
+        font-family: "Averta Std", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 4px 12px;
+        margin-top: 8px;
+      }
+    }
+    header + .text-component {
+      margin-top: 24px;
+    }
+
+    .rating-level {
+      margin-bottom: 4px;
+    }
+
+    .text-component {
+      position: relative;
+      &:before {
+        content: attr(index);
+        width: 29px;
+        background-image: url("../../assets/counter-icon.svg");
+        background-repeat: no-repeat;
+        padding: 2px 3px;
+        font-size: 13px;
+        font-family: "Averta Std", sans-serif;
+        left: -50px;
+        display: block;
+        position: absolute;
+        color: white;
+      }
+    }
+  }
+}
